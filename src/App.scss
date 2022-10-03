@@ -120,7 +120,7 @@ header {
                 color: var(--DarkGray);
                 font-size: 15px;
                 padding-bottom: 20px;
-                line-height: 1.5rem;
+                line-height: 1.5;
             }
 
             & .shop-now {
@@ -140,7 +140,6 @@ header {
                     letter-spacing: 5px;
                     text-transform: uppercase;
                     color: black;
-                    font-weight: 500;
                 }
             }
         }
@@ -169,9 +168,10 @@ header {
             }
 
             & p {
-                color: var(--DarkGray);
+                color: #a1a1a1;
                 font-size: 15px;
                 line-height: 1.5rem;
+                font-weight: 100;
             }
         }
     }
@@ -223,7 +223,6 @@ header {
                             letter-spacing: 5px;
                             text-transform: uppercase;
                             color: black;
-                            font-weight: 500;
                         }
                     }
                 }
@@ -335,7 +334,6 @@ nav {
 
                 & a {
                     color: white;
-                    font-weight: 600;
                     text-decoration: none;
                     transition: all 0.5s ease;
                 }

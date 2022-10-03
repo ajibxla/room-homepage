@@ -38,45 +38,11 @@ function Nav() {
       className={colorChange ? "colorChange" : "navbar"}
     >
       <div className="hamburger-logo">
-        {windowSize > 600 && !openNav ? (
-          openNav ||
-          (!openNav && (
-            <div className="navbar-600">
-              <div className="logo">
-                <img src="/images/logo.svg" alt="" />
-              </div>
-              <ul className="nav-links">
-                <li className="navlink">
-                  <a href="/">home</a>
-                </li>
-                <li className="navlink">
-                  <a href="/">shop</a>
-                </li>
-                <li className="navlink">
-                  <a href="/">about</a>
-                </li>
-                <li className="navlink">
-                  <a href="/">contact</a>
-                </li>
-              </ul>
+        {windowSize >= 600 && (
+          <div className="navbar-600">
+            <div className="logo">
+              <img src="/images/logo.svg" alt="" />
             </div>
-          ))
-        ) : !openNav ? (
-          <div className="hamburger" onClick={openNavMenu}>
-            <img src="/images/icon-hamburger.svg" alt="" />
-          </div>
-        ) : (
-          <div className="open-hamburger">
-            {windowSize < 600 ? (
-              <div className="close-hamburger" onClick={closeNavMenu}>
-                <img src="/images/icon-close.svg" alt="" />
-              </div>
-            ) : (
-              <div className="logo">
-                <img src="/images/logo.svg" alt="" />
-              </div>
-            )}
-
             <ul className="nav-links">
               <li className="navlink">
                 <a href="/">home</a>
@@ -94,9 +60,38 @@ function Nav() {
           </div>
         )}
 
-        {!openNav && windowSize < 600 && (
-          <div className="logo">
-            <img src="/images/logo.svg" alt="" />
+        {windowSize < 600 && !openNav && (
+          <>
+            <div className="hamburger" onClick={openNavMenu}>
+              <img src="/images/icon-hamburger.svg" alt="" />
+            </div>
+
+            <div className="logo">
+              <img src="/images/logo.svg" alt="" />
+            </div>
+          </>
+        )}
+
+        {windowSize < 600 && openNav && (
+          <div className="open-hamburger">
+            <div className="close-hamburger" onClick={closeNavMenu}>
+              <img src="/images/icon-close.svg" alt="" />
+            </div>
+
+            <ul className="nav-links">
+              <li className="navlink">
+                <a href="/">home</a>
+              </li>
+              <li className="navlink">
+                <a href="/">shop</a>
+              </li>
+              <li className="navlink">
+                <a href="/">about</a>
+              </li>
+              <li className="navlink">
+                <a href="/">contact</a>
+              </li>
+            </ul>
           </div>
         )}
       </div>
